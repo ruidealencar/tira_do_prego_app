@@ -72,7 +72,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,
                                 latitude = prestadores?.get(contador)?.latitude
                                 longitude = prestadores?.get(contador)?.longitude
                                 val borracharia = LatLng(Double.parseDouble(latitude), Double.parseDouble(longitude) )
-                                if (prestadores?.get(contador)?.telefone == "0"){
+                                if (prestadores?.get(contador)?.tipo == "borracharia"){
                                     map.addMarker(
                                         MarkerOptions().position(borracharia).title(prestadores?.get(contador)?.nome).snippet("Horario de Funcionamento: "+prestadores?.get(contador)?.horario).icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_icon)
                                         )
